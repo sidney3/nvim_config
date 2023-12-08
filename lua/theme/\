@@ -1,0 +1,15 @@
+
+local M = {}
+
+function M.setup()
+    -- Set the colorscheme
+    vim.cmd('colorscheme onedark')  -- Replace 'onedark' with your preferred colorscheme
+    vim.defer_fn(function()
+        vim.cmd('highlight Comment ctermfg=LightGrey guifg=LightGrey')
+        vim.cmd('highlight LineNr ctermfg=Grey guifg=Grey')
+    end, 0)
+    -- Optional: Override specific highlight groups
+    -- vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')  -- Example to set transparent background
+end
+
+return M
