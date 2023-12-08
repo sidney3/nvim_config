@@ -29,7 +29,12 @@ Plug 'joshdick/onedark.vim'
 
 " File tree 
 Plug 'kyazdani42/nvim-tree.lua'
+" Silly file images
 Plug 'kyazdani42/nvim-web-devicons' 
+
+" Telescope and its dependencies
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 ]])
@@ -40,3 +45,13 @@ call plug#end()
 require('nvim_comment').setup({})
 require('nvim-tree').setup({})
 require('plugins.devicons')
+
+require('telescope').setup {
+    defaults = {
+        mappings = {
+            i = {
+                ["<CR>"] = require('telescope_custom'),
+            },
+        },
+    },
+}
