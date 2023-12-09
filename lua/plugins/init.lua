@@ -46,12 +46,3 @@ require('nvim_comment').setup({})
 require('nvim-tree').setup({})
 require('plugins.devicons')
 
-require('telescope').setup {
-    defaults = {
-        mappings = {
-            i = {
-                ["<CR>"] = require('telescope_custom'),
-            },
-        },
-    },
-}
