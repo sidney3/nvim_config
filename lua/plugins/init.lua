@@ -9,9 +9,6 @@ Plug 'sheerun/vim-polyglot'
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Debugger integration
-Plug 'puremourning/vimspector'
-
 " Git commit markers
 Plug 'airblade/vim-gitgutter'
 
