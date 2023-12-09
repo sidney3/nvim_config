@@ -15,7 +15,9 @@ require('lsp')
 
 require('theme')
 
--- Additional Configurations
+-- Custom Commands
+
+require('commands')
 
 -- For Language Specific Settings
 vim.cmd('autocmd FileType cpp setlocal formatoptions-=r formatoptions-=o')
