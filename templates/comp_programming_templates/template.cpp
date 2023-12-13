@@ -26,7 +26,7 @@ int ciel(int a, int b) {return ceil(static_cast<double>(a) / static_cast<double>
 #define debug(x) cout << #x << ": " << x << endl;
 
 const string albet{"abcdefghijklmnopqrstuvwxyz"};
-const ll inf = LLONG_MAX;
+const ll inf = 1LL<<52;
 const ld ep = 0.0000001;
 const ld pi = acos(-1.0);
 const ll md = 1000000007;
