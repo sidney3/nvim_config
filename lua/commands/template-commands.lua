@@ -16,6 +16,25 @@ M.GetPF = function()
     vim.cmd('r ' .. TEMPLATES_DIR .. 'comp_programming_templates/math/get_pf.cpp')
 end
 
+M.GetDivisors = function()
+    vim.cmd('r ' .. TEMPLATES_DIR .. 'comp_programming_templates/math/get_divisors.cpp')
+end
+
+M.MRQ = function()
+    vim.cmd('r ' .. TEMPLATES_DIR .. 'comp_programming_templates/range_queries/max_range_query.cpp')
+end
+
+M.RangeUpdateQueries = function()
+    vim.cmd('r ' .. TEMPLATES_DIR .. 'comp_programming_templates/range_queries/range_update_queries.cpp')
+end
+
+M.Fenwick = function()
+    vim.cmd('r ' .. TEMPLATES_DIR .. 'comp_programming_templates/range_queries/fenwick.cpp')
+end
+
+M.ZArray = function()
+    vim.cmd('r ' .. TEMPLATES_DIR .. 'comp_programming_templates/strings/Z-array.cpp')
+end
 
 
 return M
