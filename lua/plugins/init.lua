@@ -1,44 +1,57 @@
+-- Plugin manager
+-- Run `:Lazy home` to check package health
+local lazypath = vim.fn.stdpath("data") .. "/site/pack/lazy/start/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Vim-Plug Setup (can be done in init.lua or here with vim.cmd)
-vim.cmd([[
-call plug#begin('~/.local/share/nvim/plugged')
+local plugins = 
+{
+    -- Syntax highlighting
+    { "sheerun/vim-polyglot" },
 
-" Syntax highlighting
-Plug 'sheerun/vim-polyglot'
+    -- Intellisense engine
+    { "neoclide/coc.nvim", branch = "release" },
 
-" Intellisense engine
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    -- Git commit markers
+    { "airblade/vim-gitgutter" },
 
-" Git commit markers
-Plug 'airblade/vim-gitgutter'
+    -- AutoPairs (bracket closing)
+    { "jiangmiao/auto-pairs" },
 
-" AutoPairs (bracket closing)
-Plug 'jiangmiao/auto-pairs'
+    -- LSP support
+    { "neovim/nvim-lspconfig" },
 
-" LSP support
-Plug 'neovim/nvim-lspconfig'
+    -- Comment in visual mode
+    { "terrortylor/nvim-comment" },
 
-" Comment in visual mode
-Plug 'terrortylor/nvim-comment'
+    -- Color scheme
+    { "joshdick/onedark.vim" },
 
-" Color scheme
-Plug 'joshdick/onedark.vim'
+    -- File tree 
+    { "kyazdani42/nvim-tree.lua" },
 
-" File tree 
-Plug 'kyazdani42/nvim-tree.lua'
-" Silly file images
-Plug 'kyazdani42/nvim-web-devicons' 
+    -- Silly file images
+    { "kyazdani42/nvim-web-devicons" },
 
-" Telescope and its dependencies
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+    -- Telescope and its dependencies
+    { "nvim-lua/plenary.nvim" },
+    { "nvim-telescope/telescope.nvim" }
+}
 
-call plug#end()
-]])
+local opts =
+{
+}
 
--- Plugin-specific Configurations
-
--- nvim-comment setup
+require("lazy").setup(plugins, opts)
 require('nvim_comment').setup({})
 require('nvim-tree').setup({})
 require('plugins.devicons')
