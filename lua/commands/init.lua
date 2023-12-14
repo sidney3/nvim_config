@@ -13,6 +13,8 @@ vim.api.nvim_create_user_command('GP', GitCommands.GitPush, {})
 -- Running / Compilation related commands
 vim.api.nvim_create_user_command('RunC', RunCommands.RunC, {})
 vim.api.nvim_create_user_command('R', RunCommands.RunCPP, {}) -- Shorted for competitive programming
+vim.api.nvim_create_user_command('Py', RunCommands.RunPython, {})
+vim.api.nvim_create_user_command('CPPMakeFlags', TemplateCommands.CPPBaseCompileFlags, {})
 
 -- Competitive Programming Templates
 vim.api.nvim_create_user_command('TBase', TemplateCommands.Base, {})
@@ -24,3 +26,6 @@ vim.api.nvim_create_user_command('TMRQ', TemplateCommands.MRQ, {})
 vim.api.nvim_create_user_command('TFenwick', TemplateCommands.Fenwick, {})
 vim.api.nvim_create_user_command('TRangeUpdateQueries', TemplateCommands.RangeUpdateQueries, {})
 vim.api.nvim_create_user_command('TZArray', TemplateCommands.ZArray, {})
+vim.api.nvim_create_user_command('TSetUnion', TemplateCommands.SetUnion, {})
+vim.api.nvim_create_user_command('TNodeIndexer', TemplateCommands.NodeIndexer, {})
+

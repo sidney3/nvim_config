@@ -10,6 +10,9 @@ vim.o.expandtab = true  -- Convert tabs to spaces
 vim.o.number = true     -- Show line numbers
 vim.o.relativenumber = true -- Show relative line numbers
 
+vim.o.timeoutlen = 1000 -- Time in milliseconds to wait for a mapped sequence to complete.
+vim.o.ttimeoutlen = 10  -- Time in milliseconds to wait for a key code sequence to complete.
+
 -- Syntax Highlighting and Filetype Detection
 vim.cmd('syntax on')                      -- Enable syntax highlighting
 vim.cmd('filetype plugin indent on')      -- Enables filetype detection

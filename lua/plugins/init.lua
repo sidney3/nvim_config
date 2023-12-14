@@ -44,7 +44,10 @@ local plugins =
 
     -- Telescope and its dependencies
     { "nvim-lua/plenary.nvim" },
-    { "nvim-telescope/telescope.nvim" }
+    { "nvim-telescope/telescope.nvim" },
+
+    -- Latex support
+    { "lervag/vimtex", ft = "tex"}
 }
 
 local opts =
@@ -52,13 +55,10 @@ local opts =
 }
 
 require("lazy").setup(plugins, opts)
+
+vim.g.vimtex_view_method = 'zathura'
+
 require('nvim_comment').setup({})
 require('nvim-tree').setup({})
-require('plugins.devicons')
-require('lspconfig').tsserver.setup({
-  on_attach = function(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
-    -- Add further customizations here
-  end
-})
+local lspconfig = require('lspconfig')
+lspconfig.tsserver.setup({})
