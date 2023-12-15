@@ -46,8 +46,9 @@ local plugins =
     { "nvim-lua/plenary.nvim" },
     { "nvim-telescope/telescope.nvim" },
 
-    -- Latex support
-    { "lervag/vimtex", ft = "tex"}
+    -- Leap for nvim (s--)
+    { "tpope/vim-repeat" },
+    { "ggandor/leap.nvim" }
 }
 
 local opts =
@@ -62,3 +63,4 @@ require('nvim_comment').setup({})
 require('nvim-tree').setup({})
 local lspconfig = require('lspconfig')
 lspconfig.tsserver.setup({})
+require('leap').add_default_mappings()
