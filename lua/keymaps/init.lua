@@ -12,4 +12,4 @@ map('x', '<leader>y', '"+y', opts)
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
-
+map('t', 'jj', '<C-\\><C-n>', opts)

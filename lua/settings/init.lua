@@ -28,3 +28,9 @@ vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true
 
 -- For Language Specific Settings
 vim.cmd('autocmd FileType cpp setlocal formatoptions-=r formatoptions-=o')
+
+-- Let me edit terminal!
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    command = "setlocal noma",
+})
