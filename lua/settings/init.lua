@@ -32,5 +32,7 @@ vim.cmd('autocmd FileType cpp setlocal formatoptions-=r formatoptions-=o')
 -- Let me edit terminal!
 vim.api.nvim_create_autocmd("TermOpen", {
     pattern = "*",
-    command = "setlocal noma",
+    callback = function()
+        vim.defer_fn(function() vim.opt_local.modifiable = true end, 0)
+    end,
 })
