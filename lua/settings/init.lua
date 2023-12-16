@@ -30,9 +30,7 @@ vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true
 vim.cmd('autocmd FileType cpp setlocal formatoptions-=r formatoptions-=o')
 
 -- Let me edit terminal!
-vim.api.nvim_create_autocmd("TermOpen", {
-    pattern = "*",
-    callback = function()
-        vim.defer_fn(function() vim.opt_local.modifiable = true end, 0)
-    end,
-})
+--vim.api.nvim_create_autocmd("TermOpen", {
+--   pattern = "*",
+--   vim.opt_local.modifiable = true
+--})
