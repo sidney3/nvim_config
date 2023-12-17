@@ -1,6 +1,6 @@
 local M = {}
 
-local ExpandDependencies = function()
+M.ExpandDependencies = function()
     BUILD_PATH = "$HOME/personal/ws/HeaderExpansion/src/main.py"
     TEMPLATE_PATH = "$HOME/comp_programming_templates"
     vim.cmd("!Python3 " .. BUILD_PATH .. " " .. TEMPLATE_PATH .. " $PWD/%") 
@@ -16,11 +16,6 @@ end
 
 M.RunPython = function()
     vim.cmd('w|!Python3 %')
-end
-
-M.ExpandAndRunCPP = function()
-    ExpandDependencies()
-    M.RunCPP()
 end
 
 

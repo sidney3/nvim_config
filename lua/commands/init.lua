@@ -12,9 +12,10 @@ vim.api.nvim_create_user_command('GP', GitCommands.GitPush, {})
 
 -- Running / Compilation related commands
 vim.api.nvim_create_user_command('RunC', RunCommands.RunC, {})
-vim.api.nvim_create_user_command('RunCPP', RunCommands.RunCPP, {}) -- Shorted for competitive programming
 vim.api.nvim_create_user_command('Py', RunCommands.RunPython, {})
-vim.api.nvim_create_user_command('R', RunCommands.ExpandAndRunCPP, {})
+
+vim.api.nvim_create_user_command('R', RunCommands.RunCPP, {}) -- Shorted for competitive programming
+vim.api.nvim_create_user_command('B', RunCommands.ExpandDependencies, {}) -- build
 
 -- Competitive Programming Templates
 vim.api.nvim_create_user_command('Base', TemplateCommands.Base, {})
