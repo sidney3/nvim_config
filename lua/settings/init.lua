@@ -36,3 +36,5 @@ vim.api.nvim_create_autocmd("TermOpen", {
         vim.api.nvim_buf_set_option(0, 'modifiable', true)
     end
 })
+
+require('settings.options')
