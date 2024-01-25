@@ -8,11 +8,10 @@ require('keymaps')
 -- Load plugins
 require('plugins')
 
--- Load LSP configurations
+-- -- Load LSP configurations
 require('lsp')
 
 -- Load theme (aesthetics)
-
 require('theme')
 
 -- Custom Commands

@@ -20,7 +20,7 @@ local plugins =
 
     -- Intellisense engine
     { "neoclide/coc.nvim", branch = "release" },
-
+    
     -- Git commit markers
     { "airblade/vim-gitgutter" },
 
@@ -48,7 +48,10 @@ local plugins =
 
     -- Leap for nvim (s--)
     { "tpope/vim-repeat" },
-    { "ggandor/leap.nvim" }
+    { "ggandor/leap.nvim" },
+
+    -- vim-be-good
+    { "ThePrimeagen/vim-be-good" }
 }
 
 local opts =
@@ -57,7 +60,6 @@ local opts =
 
 require("lazy").setup(plugins, opts)
 
-vim.g.vimtex_view_method = 'zathura'
 
 require('nvim_comment').setup({})
 require('nvim-tree').setup({})

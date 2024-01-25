@@ -7,8 +7,6 @@ vim.o.shiftwidth = 4    -- Number of spaces to use for each step of (auto)indent
 vim.o.autoindent = true -- Copy indent from current line when starting a new line
 vim.o.smartindent = true -- Do smart autoindenting when starting a new line
 vim.o.expandtab = true  -- Convert tabs to spaces
-vim.o.number = true     -- Show line numbers
-vim.o.relativenumber = true -- Show relative line numbers
 
 vim.o.timeoutlen = 1000 -- Time in milliseconds to wait for a mapped sequence to complete.
 vim.o.ttimeoutlen = 10  -- Time in milliseconds to wait for a key code sequence to complete.
@@ -24,17 +22,7 @@ vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true
 vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>P', '"+P', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
-
--- For Language Specific Settings
-vim.cmd('autocmd FileType cpp setlocal formatoptions-=r formatoptions-=o')
-
--- Let me edit terminal!
-vim.api.nvim_create_autocmd("TermOpen", {
-    pattern = "*",
-    callback = function()
-        vim.api.nvim_buf_set_option(0, 'modifiable', true)
-    end
-})
 
 require('settings.options')
