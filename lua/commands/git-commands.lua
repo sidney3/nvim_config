@@ -1,7 +1,7 @@
 local M = {}
 
 M.GitAdd = function()
-    vim.cmd('!git add -A')
+    vim.cmd('wall|!git add -A')
 end
 
 M.GitCommit = function(args)

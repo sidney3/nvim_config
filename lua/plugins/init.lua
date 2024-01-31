@@ -50,8 +50,14 @@ local plugins =
     { "tpope/vim-repeat" },
     { "ggandor/leap.nvim" },
 
-    -- vim-be-good
-    { "ThePrimeagen/vim-be-good" }
+    -- Markdown support
+    { "plasticboy/vim-markdown" },
+    { 
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end
+    },
+
+    {}
 }
 
 local opts =

@@ -11,7 +11,6 @@ local on_attach = function(client, bufnr)
     -- Key mappings
     buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
     buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
-    -- Add more keybindings here
 end
 
 -- LSP Server Configurations
