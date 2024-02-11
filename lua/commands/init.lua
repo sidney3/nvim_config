@@ -1,6 +1,7 @@
 local GitCommands = require('commands.git-commands')
 local RunCommands = require('commands.run-commands')
 local TemplateCommands = require('commands.template-commands')
+local MarkdownCommands = require('commands.markdown-commands')
 require('commands.aliases')
 
 -- Git Commands
@@ -19,3 +20,7 @@ vim.api.nvim_create_user_command('B', RunCommands.ExpandDependencies, {}) -- bui
 
 -- Competitive Programming Templates
 vim.api.nvim_create_user_command('Base', TemplateCommands.Base, {})
+
+vim.api.nvim_create_user_command('Table', MarkdownCommands.PrintTable, {
+    nargs = "*" 
+})

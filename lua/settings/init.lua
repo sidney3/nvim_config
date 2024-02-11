@@ -7,6 +7,7 @@ vim.o.shiftwidth = 4    -- Number of spaces to use for each step of (auto)indent
 vim.o.autoindent = true -- Copy indent from current line when starting a new line
 vim.o.smartindent = true -- Do smart autoindenting when starting a new line
 vim.o.expandtab = true  -- Convert tabs to spaces
+vim.o.number = true
 
 vim.o.timeoutlen = 1000 -- Time in milliseconds to wait for a mapped sequence to complete.
 vim.o.ttimeoutlen = 10  -- Time in milliseconds to wait for a key code sequence to complete.
