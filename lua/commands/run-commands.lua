@@ -6,12 +6,8 @@ M.ExpandDependencies = function()
     vim.cmd("!Python3 " .. BUILD_PATH .. " " .. TEMPLATE_PATH .. " $PWD/%") 
 end
 
-M.RunC = function()
-    vim.cmd('w|!clang -Wall -Wextra -g % -o %< && ./%<')
-end
-
 M.RunCPP = function()
-    vim.cmd('w|!clang++ -Wall -Wextra -g % -o %< && ./%< < in.txt')
+    vim.cmd('w|!clang++ -Wall -Wextra -std=c++17 -g % -o %< && ./%< < in.txt')
 end
 
 M.RunPython = function()

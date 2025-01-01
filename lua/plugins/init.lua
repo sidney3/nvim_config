@@ -39,18 +39,10 @@ local plugins =
     -- File tree 
     { "kyazdani42/nvim-tree.lua" },
 
-    -- Silly file images
-    { "kyazdani42/nvim-web-devicons" },
-
-    -- Telescope and its dependencies
-    { "nvim-lua/plenary.nvim" },
-    { "nvim-telescope/telescope.nvim" },
-
     -- Leap for nvim (s--)
     { "tpope/vim-repeat" },
     { "ggandor/leap.nvim" },
 
-    {}
 }
 
 local opts =
@@ -58,8 +50,6 @@ local opts =
 }
 
 require("lazy").setup(plugins, opts)
-
-
 require('nvim_comment').setup({})
 require('nvim-tree').setup({})
 local lspconfig = require('lspconfig')

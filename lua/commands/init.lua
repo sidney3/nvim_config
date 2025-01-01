@@ -12,7 +12,6 @@ vim.api.nvim_create_user_command('GC', GitCommands.GitCommit, {
 vim.api.nvim_create_user_command('GP', GitCommands.GitPush, {})
 
 -- Running / Compilation related commands
-vim.api.nvim_create_user_command('RunC', RunCommands.RunC, {})
 vim.api.nvim_create_user_command('Py', RunCommands.RunPython, {})
 
 vim.api.nvim_create_user_command('R', RunCommands.RunCPP, {}) -- Shorted for competitive programming

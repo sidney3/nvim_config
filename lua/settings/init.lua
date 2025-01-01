@@ -1,5 +1,6 @@
 -- Set leader key
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Basic Editor Settings
 vim.o.tabstop = 4       -- Number of spaces that a <Tab> in the file counts for
@@ -11,6 +12,9 @@ vim.o.number = true
 
 vim.o.timeoutlen = 1000 -- Time in milliseconds to wait for a mapped sequence to complete.
 vim.o.ttimeoutlen = 10  -- Time in milliseconds to wait for a key code sequence to complete.
+
+-- make the find command search into outside repositories.
+vim.opt.path:append("**")
 
 -- Syntax Highlighting and Filetype Detection
 vim.cmd('syntax on')                      -- Enable syntax highlighting
@@ -26,4 +30,4 @@ vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true, silent = true
 vim.api.nvim_set_keymap('n', '<leader>P', '"+P', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
 
-require('settings.options')
+vim.lsp.set_log_level("off")

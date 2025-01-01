@@ -1,4 +1,3 @@
-
 local colors = require('theme.colors')
 local terminal = require('theme.terminal')
 
