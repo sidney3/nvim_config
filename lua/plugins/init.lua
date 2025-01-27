@@ -38,6 +38,13 @@ local plugins =
 
     -- File tree 
     { "kyazdani42/nvim-tree.lua" },
+    {
+      "nvim-tree/nvim-web-devicons",
+      lazy = true, -- Only load when required
+      config = function()
+        require("nvim-web-devicons").setup()
+      end,
+    },
 
     -- Leap for nvim (s--)
     { "tpope/vim-repeat" },
