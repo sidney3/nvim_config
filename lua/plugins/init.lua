@@ -45,6 +45,10 @@ local plugins =
         require("nvim-web-devicons").setup()
       end,
     },
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    },
 
     -- Leap for nvim (s--)
     { "tpope/vim-repeat" },
