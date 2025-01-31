@@ -28,7 +28,12 @@ local plugins =
     { "jiangmiao/auto-pairs" },
 
     -- LSP support
-    { "neovim/nvim-lspconfig" },
+    -- { "neovim/nvim-lspconfig" },
+    {
+      "pmizio/typescript-tools.nvim",
+      dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+      opts = {},
+    },
 
     -- Comment in visual mode
     { "terrortylor/nvim-comment" },
@@ -63,6 +68,6 @@ local opts =
 require("lazy").setup(plugins, opts)
 require('nvim_comment').setup({})
 require('nvim-tree').setup({})
-local lspconfig = require('lspconfig')
-lspconfig.tsserver.setup({})
+-- local lspconfig = require('lspconfig')
+-- lspconfig.tsserver.setup({})
 require('leap').add_default_mappings()
